@@ -21,7 +21,8 @@
                         <th>
                             <button class='btn brn-primary'
                                 (click)='toggleImage()'>
-                                {{showImage ? 'Hide' : 'Show'}} Image
+                                {{showImage ? 'Hide' : 'Show'}} 
+                                 Image
                             </button>
                         </th>
                         <th>Product</th>
@@ -34,7 +35,7 @@
                 <tbody>
                     <tr *ngFor='let product of products'>
                        <td>
-                           <img *ngIF='showImage'
+                           <img *ngIf='showImage'
                            [src]='product.imageUrl'
                            [title]='product.productName'
                            [style.width.px]='imageWidth'
