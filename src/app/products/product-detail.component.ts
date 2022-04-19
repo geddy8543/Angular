@@ -13,10 +13,6 @@ export class ProductDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               private router: Router) { }
 
-  onBack(): void {
-    this.router.navigate(['/products']);
-  }
-
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.pageTitle += `: ${id}`;
@@ -30,6 +26,9 @@ export class ProductDetailComponent implements OnInit {
       'starRating': 3.2,
       'imageUrl': 'assets/images/leaf_rake.jpg'
     };
+  }
+  onBack(): void {
+    this.router.navigate(['/products']);
   }
 
 }
