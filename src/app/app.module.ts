@@ -16,15 +16,11 @@ import { ProductModule } from './products/product.module';
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent,
-    ProductListComponent,
-    ConvertToSpacesPipe,
-    StarComponent,
-    ProductDetailComponent
+    WelcomeComponent
+  
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
       { path: 'products', component: ProductListComponent },
